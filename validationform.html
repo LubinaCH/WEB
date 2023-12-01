@@ -1,0 +1,90 @@
+<html>
+<head>
+<style>
+.box{
+border:1px solid#ooo;
+width:50%;
+padding:20px;
+margin:auto;
+background-color:#efefef;
+}
+.head{
+text-align:center;
+}
+#form1{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+input{
+margin:10px;
+padding:5px;
+width:90%;
+margin-bottom;
+}
+#submit{
+width=40%;
+background_color:#198bec;
+border:1px solid#1988bec;
+border-radius:100px;
+color:#fff;
+}
+#submit:hover{
+background-color:#efefef;
+color:#198bec;
+}
+</style>
+<div class="box">
+<h2 class="head"> REGISTRATION FORM</h2>
+<form is="form1" name="form1" onsubmit="validation()">
+<label>NAME</label>
+<input type="text" name="name1" placeholder="Enter the name">
+<label>EMAIL</label>
+<input type="email" name="email" placeholder="Enter the email">
+<label>PASSWORD</label>
+<input type="password" name="password" placeholder="Enter the password">
+<label>MOBILE</label>
+<input type="number" name="mobile" placeholder="Enter the mobile number">
+<input id="submit" type="submit" name="submit" value="SUBMIT">
+</form>
+</div>
+<script>
+function validation(){
+var name=document.form1.name1.value;
+var pass=document.form1.password.value;
+var email=document.form1.email.value;
+var mob=document.form1.mobile.value;
+var at symbol=email.ondexof("@");
+var dot symbol=email.indexof(".");
+if(name==""){
+alert("enter a valid name");
+return false;
+}
+if(pass.length<=8)
+{
+alert("enter a valid password");
+return false;
+}
+if(mob.length!=10){
+alert("Enter a 10 number");
+return false;
+}
+if(at symbol!=1)&&(at symbol!=0)&&(dot symbol!=-1)&&(dot symbol!=0)&&(dot symbol>at symbol+1)&&(email.length>dot symbol+1))
+{
+alert("email address is valid");
+return true;
+}
+else{
+alert("enter a valid email");
+return false;
+}}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
