@@ -1,13 +1,13 @@
 <html>
 <body>
-<button onclick="changeColor()">click me</button>
+<button onclick="changeColor()">change</button>
 <script>
-var place=0:
+var color=["red","green","blue"];
+var index=0;
 function changecolor(){
-var colorList=["red","green","violet"]:
-document.body.style.backgroundColor=colorList[place]:
-place++:
-if(place===colorList.length)place=0:
+
+documentbody.style.backgroundColor=color[index];
+index=(index+1)%color.length
 }
 </script>
 </body>
